@@ -1,0 +1,58 @@
+<div class="pagecontainer">
+  <div>
+    <h3>Lista artisti</h3>
+  </div>  
+
+  <div class="mt-2">
+    <button mat-raised-button type="button" color="primary" (click)="onCreate()">Nuovo artista</button>&nbsp;
+  </div>
+
+  <div>    
+    <mat-table [dataSource]="datasource$">      
+      <ng-container matColumnDef="artistId">
+        <mat-header-cell *matHeaderCellDef>Id</mat-header-cell>
+        <mat-cell *matCellDef="let r">{{ r.artistId }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <mat-header-cell *matHeaderCellDef>Descrizione</mat-header-cell>
+        <mat-cell *matCellDef="let r">{{ r.description }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="address">
+        <mat-header-cell *matHeaderCellDef>Indirizzo</mat-header-cell>
+        <mat-cell *matCellDef="let r">{{ r.address }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="city">
+        <mat-header-cell *matHeaderCellDef>City</mat-header-cell>
+        <mat-cell *matCellDef="let r">{{ r.city }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="phone">
+        <mat-header-cell *matHeaderCellDef>Phone</mat-header-cell>
+        <mat-cell *matCellDef="let r">{{ r.phone }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="email">
+        <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+        <mat-cell *matCellDef="let r">{{ r.email }}</mat-cell>
+      </ng-container>
+
+      <ng-container matColumnDef="x">
+        <mat-header-cell *matHeaderCellDef></mat-header-cell>
+        <mat-cell *matCellDef="let r">
+          <button mat-raised-button type="button" color="primary" (click)="onEdit(r)">Modifica</button>&nbsp;
+          <button mat-raised-button type="button" color="primary" (click)="onDelete(r)">Cancella</button>&nbsp;
+        </mat-cell>
+      </ng-container>
+
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let r; columns: displayedColumns"></mat-row>
+    </mat-table>
+
+    <!-- <div *ngIf="datasource.count<0">
+      <h1 class="table-empty">Not found</h1>
+    </div> -->
+  </div>
+</div>

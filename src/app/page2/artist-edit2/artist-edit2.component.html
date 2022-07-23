@@ -1,0 +1,57 @@
+<div>
+  <div>
+    <h2>Modifica artista</h2>
+  </div>
+
+  <div class="messagebox">
+    <app-messagebox [status]="status"></app-messagebox>
+  </div>
+
+  <form class="form-container-with-row" (ngSubmit)="onSubmit(f)" #f="ngForm">   
+    <div class="row">   
+      <div class="col-md-12">
+        <mat-form-field>
+          <input matInput name="description" placeholder="description" [ngModel]="form.description" required>
+        </mat-form-field>
+      </div>          
+    </div>
+
+    <div class="row">   
+      <div class="col-md-12">
+        <mat-form-field>
+          <input matInput name="address" placeholder="address" [ngModel]="form.address">
+        </mat-form-field>
+      </div>          
+    </div>
+
+    <div class="row">   
+      <div class="col-md-12">
+        <mat-form-field>
+          <input matInput name="city" placeholder="city" [ngModel]="form.city">
+        </mat-form-field>
+      </div>          
+    </div>
+
+    <div class="row">   
+      <div class="col-md-12">
+        <mat-form-field>
+          <input matInput name="phone" placeholder="phone" [ngModel]="form.phone">
+        </mat-form-field>
+      </div>          
+    </div>
+
+    <div class="row">   
+      <div class="col-md-12">
+        <mat-form-field>
+          <input matInput name="email" placeholder="email" [ngModel]="form.email">
+        </mat-form-field>
+      </div>          
+    </div>    
+   
+    <div class="row">
+      <div class="col-md-4">
+        <button mat-raised-button color="primary" [disabled]="f.invalid">Salva</button>&nbsp;
+        <button mat-raised-button type="button" (click)="onClose()">Chiudi</button>&nbsp;
+      </div>
+    </div>
+  </form>

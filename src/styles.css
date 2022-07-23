@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.pagecontainer {
+    margin: 15px 15px 40px 15px;
+  } 
+  
+  .sidenav-container {
+    height: 100%;
+  }
+  
+  .mat-sidenav {
+    width: 250px;
+    box-shadow: 3px 0 6px rgba(0,0,0,.24);
+  }
+
+  .navTitleCommandBar {
+    width: 100%;
+  }
+  
+    .navTitleCommandBar .navTitle {
+      display: inline-block;      
+      width: 80%;      
+      padding-left: 20px;
+    }
+
+    .form-container-with-row mat-form-field {
+      display: block;
+    }      
+
+    .form-container100 {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    
+      .form-container100 > * {
+        width: 100%;
+      }
+    
+    .form-container50 {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+    }
+    
+      .form-container50 > * {
+        width: 100%;
+      }  
+      
+.homeBox {
+   display: flex;    
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

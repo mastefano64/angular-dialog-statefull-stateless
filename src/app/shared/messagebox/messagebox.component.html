@@ -1,0 +1,4 @@
+
+<p *ngIf="status.hasError">
+  <span [ngStyle]="{'color': color}" *ngFor="let message of status.errorsMessage">{{ message }}</span>
+</p>
